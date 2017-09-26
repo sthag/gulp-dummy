@@ -1,0 +1,70 @@
+// Document
+// -----------------------------------------------------------------------------
+
+html {
+	height: 100%;
+}
+
+
+
+
+// Basic sections
+// -----------------------------------------------------------------------------
+
+body {
+	position: relative;
+	height: 100vh;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Courier New', monospace;
+	font-size: 16px;
+	line-height: 1.2;
+	color: black;
+	background-color: gold;
+
+	*,
+	::before,
+	::after {
+		box-sizing: inherit;
+	}
+
+	&:hover {
+
+		.layer__hover {
+			background-color: transparent;
+		}
+	}
+}
+
+
+
+// Positioned elements
+// ------------------------------------------------------------------------------
+%full_viewport {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+.hover_full_view_change {
+	@extend %full_viewport;
+	z-index: 1000;
+	background-color: transparentize(black, .5);
+	transition: background-color .2s ease-in-out;
+	pointer-events: none;
+}
+
+.wrap {
+	display: flex;
+	height: 100%;
+	align-items: center;
+  justify-content: center;
+}
+
+.hello {
+	flex:  0 1 auto;
+	padding: 1em 2em;
+	background-color: rgba(black, .25);
+}

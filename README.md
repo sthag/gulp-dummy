@@ -3,8 +3,8 @@ A gulp setup for static HTML development
 
 ## Prerequisites
 
-$ npm config set proxy http://192.168.181.1:3128  
-$ npm config set https-proxy http://192.168.181.1:3128  
+$ npm config set proxy http://IP:Port  
+$ npm config set https-proxy http://IP:Port  
 $ npm config set strict-ssl false
 $ npm config set registry "http://registry.npmjs.org/"
 
